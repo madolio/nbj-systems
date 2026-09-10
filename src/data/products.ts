@@ -3,35 +3,50 @@ export type Product = {
   description: string
 }
 
-export const products: Product[] = [
-  {
-    name: 'Bancada Reprocessadora',
-    description:
-      'Equipamento para reprocessamento de dialisadores em clínicas de hemodiálise, com controle de fluxo e segurança operacional.',
-  },
+export const treatmentProducts: Product[] = [
   {
     name: 'Elementos Filtrantes',
     description:
-      'Filtros Lisa, Big Blue e cartuchos plissados de 0,22 micra para as diferentes etapas da purificação da água.',
-  },
-  {
-    name: 'Insumos',
-    description:
-      'Resinas especiais e carvão ativado mineral para tratamento e sistemas de osmose reversa.',
-  },
-  {
-    name: 'Lava Fístula Coletivo',
-    description:
-      'Equipamento para higienização de fístulas em ambiente hospitalar, com praticidade e segurança.',
-  },
-  {
-    name: 'Sistema de Exaustão',
-    description:
-      'Soluções de exaustão para ambientes que exigem controle rigoroso de qualidade do ar.',
+      'Linha abrangente de elementos filtrantes projetados para garantir a purificação e a qualidade da água em diversas aplicações, fabricados com materiais de alta qualidade.',
   },
   {
     name: 'Tanques em PRFV',
     description:
-      'Tanques em fibra de vidro reforçada, resistentes à corrosão, para armazenamento e tratamento de água.',
+      'Tanques em Polímero Reforçado com Fibra de Vidro, resistentes e versáteis. Suportam vazões de 300 a 20.000 litros por hora, atendendo projetos de diversos portes.',
+  },
+  {
+    name: 'Bancada Reprocessadora de Capilar',
+    description:
+      'Equipamento em polipropileno branco para limpeza e reuso seguro de capilares em clínicas de hemodiálise e diálise peritoneal, com desinfecção química eficiente.',
+  },
+  {
+    name: 'Insumos e Cargas Filtrantes',
+    description:
+      'Zeólitas (alumino silicatos hidratados) com estrutura microporosa em três granulometrias, altamente eficazes em troca iônica, purificação e remoção de impurezas.',
   },
 ]
+
+export const osmosisProducts: Product[] = [
+  {
+    name: 'NBJ-OR-15L',
+    description:
+      'Sistema compacto de osmose reversa para produção de água desmineralizada. Ideal para laboratórios e esterilização, com flush automático e membranas RO1000.',
+  },
+  {
+    name: 'NBJ-OR-70L',
+    description:
+      'Sistema compacto e eficiente indicado para laboratórios, indústrias, cervejarias, potabilização e esterilização, com pré-tratamento de polipropileno e carvão ativado.',
+  },
+  {
+    name: 'NBJ-OR-150L',
+    description:
+      'Solução eficiente para produção de água desmineralizada, ideal para laboratórios, indústrias, hospitais e centrais de esterilização, com pré-tratamento completo.',
+  },
+  {
+    name: 'NBJ-OR-250L',
+    description:
+      'Vazão de 250L/h, ideal para laboratórios, indústrias cervejeiras, cosméticas, alimentícias e hospitalares. Alta pureza, eficiência e durabilidade.',
+  },
+]
+
+export const products: Product[] = [...treatmentProducts, ...osmosisProducts]

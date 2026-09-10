@@ -1,4 +1,12 @@
-import { PHONE_PRIMARY, PHONE_PRIMARY_HREF, PHONE_SECONDARY } from '../constants'
+import {
+  ADDRESS,
+  ADDRESS_CEP,
+  PHONE_PRIMARY,
+  PHONE_PRIMARY_HREF,
+  PHONE_SECONDARY,
+  WHATSAPP_DISPLAY,
+  WHATSAPP_URL,
+} from '../constants'
 
 export default function Footer() {
   return (
@@ -23,13 +31,25 @@ export default function Footer() {
                 </a>
               </li>
               <li>{PHONE_SECONDARY}</li>
+              <li>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition hover:text-ink"
+                >
+                  WhatsApp: {WHATSAPP_DISPLAY}
+                </a>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-ink">Atendimento</h3>
+            <h3 className="text-sm font-semibold text-ink">Endereço</h3>
             <p className="mt-3 text-sm text-ink/60">
-              Grande São Paulo e interior — clínicas, hospitais e indústria.
+              {ADDRESS}
+              <br />
+              {ADDRESS_CEP}
             </p>
           </div>
         </div>

@@ -4,6 +4,8 @@ import Hero from '../components/Hero'
 import PorQue from '../components/PorQue'
 import ProductsGrid from '../components/ProductsGrid'
 import Setores from '../components/Setores'
+import Sobre from '../components/Sobre'
+import { treatmentProducts } from '../data/products'
 
 export default function Home() {
   return (
@@ -26,11 +28,12 @@ export default function Home() {
           </div>
 
           <div className="mt-10">
-            <ProductsGrid limit={3} />
+            <ProductsGrid items={treatmentProducts} limit={3} />
           </div>
         </div>
       </section>
 
+      <Sobre />
       <PorQue />
       <CTA />
     </>

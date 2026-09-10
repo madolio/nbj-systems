@@ -1,15 +1,17 @@
-import { products } from '../data/products'
+import { products, type Product } from '../data/products'
 import ProductIcon from './ProductIcon'
 
 type ProductsGridProps = {
   limit?: number
+  items?: Product[]
 }
 
-export default function ProductsGrid({ limit }: ProductsGridProps) {
-  const list = limit ? products.slice(0, limit) : products
+export default function ProductsGrid({ limit, items }: ProductsGridProps) {
+  const source = items ?? products
+  const list = limit ? source.slice(0, limit) : source
 
   return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {list.map((product, i) => (
         <div
           key={product.name}
