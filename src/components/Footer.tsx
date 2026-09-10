@@ -2,7 +2,7 @@ import { PHONE_PRIMARY, PHONE_PRIMARY_HREF, PHONE_SECONDARY } from '../constants
 
 export default function Footer() {
   return (
-    <footer id="contato" className="border-t border-line bg-surface-alt">
+    <footer id="contato" className="scroll-mt-20 border-t border-line bg-surface-alt">
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid gap-8 sm:grid-cols-3">
           <div>

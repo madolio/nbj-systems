@@ -23,18 +23,18 @@ export default function Nav() {
           >
             Produtos
           </Link>
-          <a
-            href="/#setores"
+          <Link
+            to="/#setores"
             className="text-sm font-medium text-ink/70 transition hover:text-ink"
           >
             Setores
-          </a>
-          <a
-            href="/#contato"
+          </Link>
+          <Link
+            to="/#contato"
             className="text-sm font-medium text-ink/70 transition hover:text-ink"
           >
             Contato
-          </a>
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -75,20 +75,20 @@ export default function Nav() {
           >
             Produtos
           </Link>
-          <a
-            href="/#setores"
+          <Link
+            to="/#setores"
             onClick={() => setOpen(false)}
             className="py-2 text-sm font-medium text-ink/70 transition hover:text-ink"
           >
             Setores
-          </a>
-          <a
-            href="/#contato"
+          </Link>
+          <Link
+            to="/#contato"
             onClick={() => setOpen(false)}
             className="py-2 text-sm font-medium text-ink/70 transition hover:text-ink"
           >
             Contato
-          </a>
+          </Link>
           <a
             href={PHONE_PRIMARY_HREF}
             className="mt-2 rounded-full bg-accent px-5 py-2.5 text-center text-sm font-semibold text-white"
