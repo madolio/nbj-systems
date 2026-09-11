@@ -77,7 +77,7 @@ export default function Footer() {
           </span>{' '}
           por{' '}
           <a
-            href="https://madolio.fenoninho-max.workers.dev"
+            href="https://madolio.com.br"
             target="_blank"
             rel="noreferrer"
             className="underline decoration-white/20 transition-colors hover:text-white/70 hover:decoration-white/50"
