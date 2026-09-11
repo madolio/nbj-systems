@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nbj-systems.netlify.app/sitemap.xml
+Sitemap: https://nbj-systems.fenoninho-max.workers.dev/sitemap.xml

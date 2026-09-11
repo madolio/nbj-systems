@@ -1,6 +1,21 @@
 # NBJ Systems
 
-Landing page da NBJ Systems (equipamentos para filtração e tratamento de água). Vite + React + TypeScript + Tailwind v4. Deploy manual na Netlify por enquanto (sem auto-deploy configurado ainda — ver histórico de conversa/memória do Claude para retomar isso).
+Landing page da NBJ Systems (equipamentos para filtração e tratamento de água). Vite + React + TypeScript + Tailwind v4.
+
+## Deploy (Cloudflare Workers — desde 11/set/2026)
+
+Migrou do Netlify pro Cloudflare Workers (assets estáticos) no mesmo dia. **Sem domínio próprio ainda** — vive em `https://nbj-systems.fenoninho-max.workers.dev`. Se a NBJ comprar um domínio, atualizar canonical/OG/sitemap/robots.txt (hoje hardcoded pro subdomínio `.workers.dev`) e vincular o domínio ao Worker no Cloudflare.
+
+Deploy manual (sem auto-deploy em push):
+
+```
+npm run build
+npx wrangler deploy
+```
+
+`wrangler.toml` aponta pro Worker `nbj-systems` (`[assets] directory = "./dist"`, `not_found_handling = "single-page-application"`). Autenticação wrangler já feita nesta máquina (conta `fenoninho.max@gmail.com`); ver CLAUDE.md do `madolio` pra detalhes.
+
+O `netlify.toml` e o site antigo em `nbj-systems.netlify.app` ainda existem mas não são mais a fonte de verdade.
 
 Conteúdo baseado no rascunho real da empresa em GreatPages (https://app.greatpages.com.br/pages/2554928/preview — conteúdo real, mas página nunca publicada). Endereço, WhatsApp e descrições de produto em `src/constants.ts` e `src/data/products.ts` vêm de lá. Se o usuário mandar fotos reais dos produtos/instalações (links ou arquivos), elas devem substituir os ícones/mocks abstratos atuais — confirmar direito de uso se a origem não for clara.
 
