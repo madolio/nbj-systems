@@ -5,6 +5,7 @@ export const PHONE_PRIMARY = "(11) 5844-0222"
 export const PHONE_SECONDARY = "(11) 4701-9970"
 export const WHATSAPP_DISPLAY = "(11) 94550-0180"
 export const PHONE_PRIMARY_HREF = "tel:+551158440222"
+export const PHONE_SECONDARY_HREF = "tel:+551147019970"
 
 export const ADDRESS = "Rua João José Ferreira, 236 – Parque Laguna – Taboão da Serra – SP"
 export const ADDRESS_CEP = "CEP 06795-050"

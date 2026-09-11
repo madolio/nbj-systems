@@ -1,40 +1,42 @@
-import ProductsGrid from '../components/ProductsGrid'
-import { osmosisProducts, treatmentProducts } from '../data/products'
+import OsmosisScale from '../components/OsmosisScale'
+import SpecList from '../components/SpecList'
+import { treatmentProducts } from '../data/products'
 
 export default function Produtos() {
   return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-28">
-      <div className="mx-auto max-w-6xl px-6">
-        <span className="inline-flex items-center rounded-full border border-line bg-surface-alt px-4 py-1.5 text-sm font-medium text-ink/70">
-          Produtos
-        </span>
-        <h1 className="mt-6 text-4xl font-extrabold leading-tight text-ink md:text-5xl">
-          Equipamentos para filtração e tratamento de água
-        </h1>
-        <p className="mt-4 max-w-2xl text-lg text-ink/70">
-          Soluções projetadas para atender às necessidades de clínicas,
-          hospitais e indústrias.
-        </p>
-
-        <div className="mt-12">
-          <ProductsGrid items={treatmentProducts} />
-        </div>
-
-        <div className="mt-20">
-          <h2 className="text-3xl font-extrabold text-ink md:text-4xl">
-            Osmose reversa compacta
-          </h2>
-          <p className="mt-4 max-w-2xl text-lg text-ink/70">
-            Sistemas compactos que produzem água desmineralizada com alta
-            eficiência, removendo sais e impurezas — ideais para usos
-            industriais, laboratoriais e hospitalares.
+    <>
+      <section className="pt-28 pb-20 md:pt-36 md:pb-28">
+        <div className="mx-auto max-w-6xl px-6">
+          <h1 className="max-w-3xl text-[2.5rem] font-extrabold leading-[1.02] text-ink md:text-[3.75rem]">
+            Equipamentos para filtração e tratamento de água
+          </h1>
+          <p className="mt-6 max-w-xl text-ink/75">
+            Soluções projetadas para atender às necessidades de clínicas,
+            hospitais e indústrias.
           </p>
 
-          <div className="mt-10">
-            <ProductsGrid items={osmosisProducts} />
+          <div className="mt-14">
+            <SpecList items={treatmentProducts} />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section id="osmose" className="scroll-mt-20 bg-surface-alt py-20 md:py-28">
+        <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[1fr_1.4fr] md:gap-16">
+          <div>
+            <h2 className="text-3xl font-extrabold text-ink md:text-[2.75rem]">
+              Osmose reversa compacta
+            </h2>
+            <p className="mt-5 max-w-md text-ink/75">
+              Sistemas compactos que produzem água desmineralizada com alta
+              eficiência, removendo sais e impurezas. Ideais para usos
+              industriais, laboratoriais e hospitalares.
+            </p>
+          </div>
+
+          <OsmosisScale detailed />
+        </div>
+      </section>
+    </>
   )
 }
