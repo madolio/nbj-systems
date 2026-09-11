@@ -18,18 +18,12 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 pt-20 pb-10 md:pt-24">
         <div className="grid gap-12 md:grid-cols-[1.3fr_1fr] md:gap-16">
           <div>
-<<<<<<< HEAD
-            <img src="/images/logo.png" alt="NBJ Systems" className="h-8 w-auto" />
-            <p className="mt-3 text-sm text-ink/60">
-              Equipamentos para filtração e purificação de água há mais de 30 anos.
-=======
             <h2 className="text-3xl font-extrabold md:text-[2.75rem]">
               Fale com a nossa equipe
             </h2>
             <p className="mt-4 max-w-md text-white/70">
               Conte o que você precisa tratar e receba uma orientação rápida
               sobre a melhor solução para o seu caso.
->>>>>>> 042ea53c4ca3425c4a3ce75a154c6f9a60ace7fe
             </p>
 
             <ul className="mt-10 space-y-2" style={{ fontStretch: '116%' }}>

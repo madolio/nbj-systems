@@ -14,18 +14,8 @@ export default function Nav() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-ink/10 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-<<<<<<< HEAD
         <Link to="/" onClick={() => setOpen(false)} className="flex items-center">
           <img src="/images/logo.png" alt="NBJ Systems" className="h-8 w-auto" />
-=======
-        <Link
-          to="/"
-          onClick={() => setOpen(false)}
-          className="font-heading text-xl font-extrabold text-ink"
-          style={{ fontStretch: '125%' }}
-        >
-          NBJ <span className="font-medium">Systems</span>
->>>>>>> 042ea53c4ca3425c4a3ce75a154c6f9a60ace7fe
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
