@@ -10,7 +10,7 @@ import {
 } from '../constants'
 
 const phoneLink =
-  'font-heading text-[1.75rem] font-bold leading-tight text-white underline decoration-white/0 underline-offset-[6px] transition-colors hover:decoration-white/60 md:text-[2.5rem]'
+  'font-heading text-xl font-bold leading-tight text-white underline decoration-white/0 underline-offset-[6px] transition-colors hover:decoration-white/60 md:text-2xl'
 
 export default function Footer() {
   return (
@@ -18,7 +18,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 pt-20 pb-10 md:pt-24">
         <div className="grid gap-12 md:grid-cols-[1.3fr_1fr] md:gap-16">
           <div>
-            <h2 className="text-3xl font-extrabold md:text-[2.75rem]">
+            <h2 className="text-2xl font-extrabold md:text-3xl">
               Fale com a nossa equipe
             </h2>
             <p className="mt-4 max-w-md text-white/70">
@@ -65,9 +65,25 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-wrap justify-between gap-4 border-t border-white/15 pt-6 text-sm text-white/50">
+        <div className="mt-16 flex flex-wrap justify-between gap-4 border-t border-white/15 pt-6 text-sm text-white/50">
           <span>© {new Date().getFullYear()} NBJ Systems</span>
           <span>Equipamentos para tratamento de água desde 1990</span>
+        </div>
+
+        <div className="mt-4 text-sm text-white/40">
+          Feito com{' '}
+          <span aria-hidden="true" className="text-red-400">
+            ♥
+          </span>{' '}
+          por{' '}
+          <a
+            href="https://madolio.com.br"
+            target="_blank"
+            rel="noreferrer"
+            className="underline decoration-white/20 transition-colors hover:text-white/70 hover:decoration-white/50"
+          >
+            Madolio
+          </a>
         </div>
       </div>
     </footer>
