@@ -15,15 +15,28 @@ export default function ProductsGrid({ limit, items }: ProductsGridProps) {
       {list.map((product, i) => (
         <div
           key={product.name}
-          className="rounded-2xl border border-line bg-white p-6"
+          className="overflow-hidden rounded-2xl border border-line bg-white"
         >
-          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
-            <ProductIcon index={i} />
+          {product.image ? (
+            <div className="aspect-[4/3] w-full overflow-hidden bg-surface-alt">
+              <img
+                src={product.image}
+                alt={product.name}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          ) : null}
+
+          <div className="p-6">
+            {!product.image && (
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                <ProductIcon index={i} />
+              </div>
+            )}
+            <h3 className="text-lg font-extrabold text-ink">{product.name}</h3>
+            <p className="mt-2 text-sm text-ink/60">{product.description}</p>
           </div>
-          <h3 className="mt-4 text-lg font-extrabold text-ink">
-            {product.name}
-          </h3>
-          <p className="mt-2 text-sm text-ink/60">{product.description}</p>
         </div>
       ))}
     </div>

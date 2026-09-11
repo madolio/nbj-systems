@@ -8,12 +8,8 @@ export default function Nav() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link
-          to="/"
-          onClick={() => setOpen(false)}
-          className="font-heading text-xl font-extrabold text-ink"
-        >
-          NBJ<span className="text-accent"> Systems</span>
+        <Link to="/" onClick={() => setOpen(false)} className="flex items-center">
+          <img src="/images/logo.png" alt="NBJ Systems" className="h-8 w-auto" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

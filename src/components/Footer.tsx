@@ -14,9 +14,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid gap-8 sm:grid-cols-3">
           <div>
-            <span className="font-heading text-lg font-extrabold text-ink">
-              NBJ<span className="text-accent"> Systems</span>
-            </span>
+            <img src="/images/logo.png" alt="NBJ Systems" className="h-8 w-auto" />
             <p className="mt-3 text-sm text-ink/60">
               Equipamentos para filtração e purificação de água há mais de 30 anos.
             </p>
