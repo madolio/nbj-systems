@@ -23,7 +23,7 @@ export default function SpecList({ items }: { items: Product[] }) {
           )}
 
           <div>
-            <h3 className="text-2xl font-bold leading-tight text-ink">
+            <h3 className="text-2xl font-bold leading-tight text-accent">
               {product.name}
             </h3>
             <p className="mt-3 max-w-prose text-ink/70 leading-relaxed">
