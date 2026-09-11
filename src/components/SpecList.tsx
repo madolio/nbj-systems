@@ -17,7 +17,7 @@ export default function SpecList({ items }: { items: Product[] }) {
               <span className="font-semibold text-ink tabular-nums">
                 {product.spec.value}
               </span>{' '}
-              <span className="text-ink/55 md:block">{product.spec.label}</span>
+              <span className="text-ink/75 md:block">{product.spec.label}</span>
             </p>
           )}
         </li>

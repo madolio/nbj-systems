@@ -43,7 +43,7 @@ export default function Home() {
             </p>
             <Link
               to="/produtos#osmose"
-              className="mt-6 inline-block font-semibold text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent"
+              className="mt-6 inline-block font-semibold text-accent-hover underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent"
             >
               Comparar os modelos
             </Link>

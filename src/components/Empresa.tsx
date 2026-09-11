@@ -5,7 +5,7 @@ export default function Empresa() {
     <section id="setores" className="scroll-mt-20 py-20 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-14 px-6 md:grid-cols-2 md:gap-16">
         <div>
-          <h2 className="text-lg font-semibold text-ink/60">Setores atendidos</h2>
+          <h2 className="text-lg font-semibold text-ink/75">Setores atendidos</h2>
           <ul className="mt-5 space-y-1">
             {sectors.map((sector) => (
               <li
