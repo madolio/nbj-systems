@@ -1,7 +1,7 @@
-import type { Product } from '../data/products'
+﻿import type { Product } from '../data/products'
 
 export default function SpecList({ items }: { items: Product[] }) {
-  // Renderiza com imagens ao lado de nome/descrição/specs
+  // Renderiza com imagens ao lado de nome/descriÃ§Ã£o/specs
   return (
     <ul className="space-y-8 border-t border-ink/15">
       {items.map((product) => (
@@ -23,7 +23,7 @@ export default function SpecList({ items }: { items: Product[] }) {
           )}
 
           <div>
-            <h3 className="text-2xl font-bold leading-tight text-accent">
+            <h3 className="text-2xl font-bold leading-tight text-ink">
               {product.name}
             </h3>
             <p className="mt-3 max-w-prose text-ink/70 leading-relaxed">
