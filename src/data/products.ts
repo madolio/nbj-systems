@@ -1,7 +1,16 @@
 export type Product = {
   name: string
   description: string
+<<<<<<< HEAD
   image?: string
+=======
+  spec?: { value: string; label: string }
+}
+
+export type OsmosisModel = Product & {
+  /** Vazão nominal em litros por hora (o número do modelo). */
+  flow: number
+>>>>>>> 042ea53c4ca3425c4a3ce75a154c6f9a60ace7fe
 }
 
 export const treatmentProducts: Product[] = [
@@ -14,8 +23,13 @@ export const treatmentProducts: Product[] = [
   {
     name: 'Tanques em PRFV',
     description:
+<<<<<<< HEAD
       'Tanques em Polímero Reforçado com Fibra de Vidro, resistentes e versáteis. Suportam vazões de 300 a 20.000 litros por hora, atendendo projetos de diversos portes.',
     image: '/images/tanques-prfv.jpg',
+=======
+      'Tanques em Polímero Reforçado com Fibra de Vidro, resistentes e versáteis, para projetos de diversos portes.',
+    spec: { value: '300 a 20.000 L/h', label: 'de vazão' },
+>>>>>>> 042ea53c4ca3425c4a3ce75a154c6f9a60ace7fe
   },
   {
     name: 'Bancada Reprocessadora de Capilar',
@@ -26,35 +40,42 @@ export const treatmentProducts: Product[] = [
   {
     name: 'Insumos e Cargas Filtrantes',
     description:
-      'Zeólitas (alumino silicatos hidratados) com estrutura microporosa em três granulometrias, altamente eficazes em troca iônica, purificação e remoção de impurezas.',
+      'Zeólitas (alumino silicatos hidratados) com estrutura microporosa, altamente eficazes em troca iônica, purificação e remoção de impurezas.',
+    spec: { value: '3 granulometrias', label: 'de zeólita' },
   },
 ]
 
-export const osmosisProducts: Product[] = [
+export const osmosisModels: OsmosisModel[] = [
   {
     name: 'NBJ-OR-15L',
+    flow: 15,
     description:
       'Sistema compacto de osmose reversa para produção de água desmineralizada. Ideal para laboratórios e esterilização, com flush automático e membranas RO1000.',
     image: '/images/osmose-15l.webp',
   },
   {
     name: 'NBJ-OR-70L',
+    flow: 70,
     description:
       'Sistema compacto e eficiente indicado para laboratórios, indústrias, cervejarias, potabilização e esterilização, com pré-tratamento de polipropileno e carvão ativado.',
     image: '/images/osmose-70l.webp',
   },
   {
     name: 'NBJ-OR-150L',
+    flow: 150,
     description:
       'Solução eficiente para produção de água desmineralizada, ideal para laboratórios, indústrias, hospitais e centrais de esterilização, com pré-tratamento completo.',
     image: '/images/osmose-150l.webp',
   },
   {
     name: 'NBJ-OR-250L',
+    flow: 250,
     description:
+<<<<<<< HEAD
       'Vazão de 250L/h, ideal para laboratórios, indústrias cervejeiras, cosméticas, alimentícias e hospitalares. Alta pureza, eficiência e durabilidade.',
     image: '/images/osmose-250l.webp',
+=======
+      'Ideal para laboratórios, indústrias cervejeiras, cosméticas, alimentícias e hospitalares. Alta pureza, eficiência e durabilidade.',
+>>>>>>> 042ea53c4ca3425c4a3ce75a154c6f9a60ace7fe
   },
 ]
-
-export const products: Product[] = [...treatmentProducts, ...osmosisProducts]
