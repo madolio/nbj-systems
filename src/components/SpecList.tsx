@@ -1,7 +1,6 @@
 ﻿import type { Product } from '../data/products'
 
 export default function SpecList({ items }: { items: Product[] }) {
-  // Renderiza com imagens ao lado de nome/descriÃ§Ã£o/specs
   return (
     <ul className="space-y-8 border-t border-ink/15">
       {items.map((product) => (
