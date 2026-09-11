@@ -2,22 +2,40 @@ import type { Product } from '../data/products'
 
 export default function SpecList({ items }: { items: Product[] }) {
   return (
-    <ul className="border-t border-ink/15">
+    <ul className="space-y-8 border-t border-ink/15">
       {items.map((product) => (
         <li
           key={product.name}
-          className="grid gap-2 border-b border-ink/15 py-7 md:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)_11rem] md:gap-10"
+          className="grid gap-6 border-b border-ink/15 py-8 md:grid-cols-[12rem_minmax(0,1fr)_12rem] md:gap-10 lg:grid-cols-[14rem_minmax(0,1.5fr)_14rem]"
         >
-          <h3 className="text-xl font-bold leading-tight text-ink md:text-2xl">
-            {product.name}
-          </h3>
-          <p className="max-w-prose text-ink/70">{product.description}</p>
+          {product.image ? (
+            <div className="overflow-hidden rounded-xl border border-ink/10 bg-surface-alt md:row-span-3">
+              <img
+                src={product.image}
+                alt={product.name}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          ) : (
+            <div className="hidden bg-surface-alt md:block" />
+          )}
+
+          <div>
+            <h3 className="text-2xl font-bold leading-tight text-ink">
+              {product.name}
+            </h3>
+            <p className="mt-3 max-w-prose text-ink/70 leading-relaxed">
+              {product.description}
+            </p>
+          </div>
+
           {product.spec && (
-            <p className="mt-1 md:mt-0 md:text-right">
-              <span className="font-semibold text-ink tabular-nums">
+            <p className="md:text-right">
+              <span className="block text-3xl font-bold text-ink tabular-nums">
                 {product.spec.value}
-              </span>{' '}
-              <span className="text-ink/75 md:block">{product.spec.label}</span>
+              </span>
+              <span className="text-sm text-ink/60">{product.spec.label}</span>
             </p>
           )}
         </li>

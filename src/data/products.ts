@@ -1,16 +1,13 @@
 export type Product = {
   name: string
   description: string
-<<<<<<< HEAD
   image?: string
-=======
   spec?: { value: string; label: string }
 }
 
 export type OsmosisModel = Product & {
   /** Vazão nominal em litros por hora (o número do modelo). */
   flow: number
->>>>>>> 042ea53c4ca3425c4a3ce75a154c6f9a60ace7fe
 }
 
 export const treatmentProducts: Product[] = [
@@ -23,13 +20,9 @@ export const treatmentProducts: Product[] = [
   {
     name: 'Tanques em PRFV',
     description:
-<<<<<<< HEAD
       'Tanques em Polímero Reforçado com Fibra de Vidro, resistentes e versáteis. Suportam vazões de 300 a 20.000 litros por hora, atendendo projetos de diversos portes.',
     image: '/images/tanques-prfv.jpg',
-=======
-      'Tanques em Polímero Reforçado com Fibra de Vidro, resistentes e versáteis, para projetos de diversos portes.',
     spec: { value: '300 a 20.000 L/h', label: 'de vazão' },
->>>>>>> 042ea53c4ca3425c4a3ce75a154c6f9a60ace7fe
   },
   {
     name: 'Bancada Reprocessadora de Capilar',
@@ -71,11 +64,7 @@ export const osmosisModels: OsmosisModel[] = [
     name: 'NBJ-OR-250L',
     flow: 250,
     description:
-<<<<<<< HEAD
       'Vazão de 250L/h, ideal para laboratórios, indústrias cervejeiras, cosméticas, alimentícias e hospitalares. Alta pureza, eficiência e durabilidade.',
     image: '/images/osmose-250l.webp',
-=======
-      'Ideal para laboratórios, indústrias cervejeiras, cosméticas, alimentícias e hospitalares. Alta pureza, eficiência e durabilidade.',
->>>>>>> 042ea53c4ca3425c4a3ce75a154c6f9a60ace7fe
   },
 ]
